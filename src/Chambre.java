@@ -34,4 +34,14 @@ public class Chambre {
     public void setLits(ArrayList<Lit> lits) {
         this.lits = lits;
     }
+
+    public String type(){
+        String type=null;
+        if (nbLit==1){
+            type="simple";
+        } else{
+            type="double";
+        }
+         return type;
+    }
 }
