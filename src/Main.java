@@ -5,6 +5,7 @@ import java.util.ArrayList;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) throws HopitalException{
+        long start = System.nanoTime();
         System.out.printf("Hopital!"+'\n');
 
         Service serviceUrologie= new Service("Urologie",1,5,5,"Ambulatoire");
@@ -17,5 +18,7 @@ public class Main {
 
         Patient patient1 = new Patient("Lucas", 9864, "Urologie");
 
+
+        long end = System.nanoTime();
         }
     }
