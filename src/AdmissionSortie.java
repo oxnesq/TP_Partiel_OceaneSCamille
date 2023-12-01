@@ -1,10 +1,12 @@
 
 public class AdmissionSortie {
+    private Patient patient;
     private int numeroChambre;
     private Lit lit;
     private Long heureArrivee;
 
-    public AdmissionSortie(int numeroChambre, Lit lit) {
+    public AdmissionSortie(Patient patient, int numeroChambre, Lit lit) {
+        this.patient=patient;
         this.numeroChambre = numeroChambre;
         this.lit = lit;
         this.heureArrivee=System.currentTimeMillis();
@@ -29,5 +31,14 @@ public class AdmissionSortie {
 
     public void setLit(Lit lit) {
         this.lit = lit;
+    }
+
+    @Override
+    public String toString() {
+        return "AdmissionSortie{" +
+                "numeroChambre=" + numeroChambre +
+                ", lit=" + lit +
+                ", heureArrivee=" + heureArrivee +
+                '}';
     }
 }
