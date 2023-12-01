@@ -1,4 +1,4 @@
-public class Lit {
+public abstract class Lit {
     private Boolean libre;
     private int tpsOccupationMax; //en jours
     private int tarifLit;

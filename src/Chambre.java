@@ -14,7 +14,7 @@ public abstract class Chambre {
     }
 
     public Lit creationLit(Service service){
-        Lit l =new Lit(true, 0, 0);
+        Lit l;
         l = switch (service.getTypeLit()) {
             case "Ambulatoire" -> new LitAmbulatoire(true);
             case "MoyenSejour" -> new LitMoyenSejour(true);
