@@ -2,7 +2,7 @@ import java.util.ArrayList;
 public class Hopital {
     private ArrayList<Service> services;
     private final int nbMax = 9;
-    private ArrayList<Admission> archiveAdminssions;
+    private ArrayList<AdmissionSortie> archiveAdminssions;
 
 
     public Hopital(ArrayList<Service> services) throws HopitalException {
@@ -42,11 +42,11 @@ public class Hopital {
                 '}';
     }
 
-    public ArrayList<Admission> getArchiveAdminssions() {
+    public ArrayList<AdmissionSortie> getArchiveAdminssions() {
         return archiveAdminssions;
     }
 
-    public void addArchiveAdminssions(Admission adm) {
+    public void addArchiveAdminssions(AdmissionSortie adm) {
         archiveAdminssions.add(adm);
     }
 }

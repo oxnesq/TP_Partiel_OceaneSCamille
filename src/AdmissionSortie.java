@@ -1,20 +1,24 @@
 
-public class Admission {
+public class AdmissionSortie {
     private Patient patient;
     private int numeroChambre;
     private Lit lit;
     private Long heureArrivee;
 
-    public Admission(Hopital hopital, Patient patient) {
+    public AdmissionSortie(Hopital hopital, Patient patient) {
         long start = System.currentTimeMillis();
         this.patient=patient;
         this.lit = getLit();
+        lit.setLibre(false);
         this.numeroChambre=getNumeroChambre();
         long end = System.currentTimeMillis();
         this.heureArrivee=end-start;
         hopital.addArchiveAdminssions(this);
     }
 
+    public Tarif sortiePatient(){
+        patient.getLit()
+    }
 
     public int getNumeroChambre() {
         return numeroChambre;
@@ -35,6 +39,7 @@ public class Admission {
     public void setLit(Lit lit) {
         this.lit = lit;
     }
+
 
     @Override
     public String toString() {
