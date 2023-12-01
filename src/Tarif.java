@@ -2,7 +2,7 @@ public class Tarif {
     private int prix;
     private Lit lit;
     private Patient patient;
-
+/*
     public Tarif(Service service,Patient patient) {
         this.lit=patient.getLit();
 
@@ -12,7 +12,7 @@ public class Tarif {
             prix=lit.getTarifLit();
         }
 
-    }
+    }*/
 
     public int getPrix() {
         return prix;

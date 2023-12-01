@@ -23,12 +23,14 @@ public class AdmissionSortie {
     public Service servicePatient(Hopital hopital, Patient patient){
         return hopital.getServiceNb(patient.getRaison());
     }
-
+/*
     public String sortiePatient(){
         lit.setLibre(true);
         Tarif tarif = new Tarif(patient);
         return patient+": "+heureArrivee+""+tarif;
     }
+
+ */
 
     public int getNumeroChambre() {
         return numeroChambre;

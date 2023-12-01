@@ -36,7 +36,7 @@ public class Hopital {
 
     public Service getServiceNb(String i){
         for (Service s : services){
-            if (s.getNom()==i)return s;
+            if (s.getNom().equals(i))return s;
         }
         return null;
     }
@@ -45,7 +45,7 @@ public class Hopital {
     public String toString() {
         return "Hopital{" +
                 "services=" + services +
-                "admissions" + archiveAdminssions+
+                "admissions= " + archiveAdminssions+
                 '}';
     }
 

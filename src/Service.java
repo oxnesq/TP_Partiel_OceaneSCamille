@@ -90,6 +90,7 @@ public class Service {
         return "Service{" +
                 "nom='" + nom + '\'' +
                 ", numero=" + numero +
+                "chambres: "
                 '}';
     }
 }

@@ -47,4 +47,12 @@ public class Patient {
     public void setLit(Lit lit) {
         this.lit = lit;
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "nom='" + nom + '\'' +
+                ", numSecurite=" + numSecurite +
+                '}';
+    }
 }
