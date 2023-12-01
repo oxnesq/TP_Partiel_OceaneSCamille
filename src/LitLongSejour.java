@@ -1,5 +1,5 @@
 public class LitLongSejour extends Lit{
     public LitLongSejour(Boolean libre) {
-        super(libre, 30);
+        super(libre, 30,25);
     }
 }
