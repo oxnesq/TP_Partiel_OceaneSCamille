@@ -29,6 +29,22 @@ public class Service {
         return nbChambreDouble;
     }
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public void setNbChambreSimple(int nbChambreSimple) {
+        this.nbChambreSimple = nbChambreSimple;
+    }
+
+    public void setNbChambreDouble(int nbChambreDouble) {
+        this.nbChambreDouble = nbChambreDouble;
+    }
+
     public int nbChambreTot(){
         return nbChambreSimple+nbChambreDouble;
     }
