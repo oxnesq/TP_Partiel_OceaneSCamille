@@ -5,7 +5,6 @@ public class Tarif {
 
     public Tarif(Patient patient) {
         this.lit=patient.getLit();
-
         for (Lit l : chambre.getLits()){
             if (l.equals(lit))this.lit = lit;
         }

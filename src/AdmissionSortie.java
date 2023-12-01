@@ -16,10 +16,10 @@ public class AdmissionSortie {
         hopital.addArchiveAdminssions(this);
     }
 
-    public Tarif sortiePatient(){
+    public String sortiePatient(){
         lit.setLibre(true);
-        Tarif tarif = new Tarif(numeroChambre,lit);
-        return
+        Tarif tarif = new Tarif(patient);
+        return patient+": "+heureArrivee+""+tarif;
     }
 
     public int getNumeroChambre() {
