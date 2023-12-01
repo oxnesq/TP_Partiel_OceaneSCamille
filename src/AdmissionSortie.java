@@ -6,13 +6,10 @@ public class AdmissionSortie {
     private Long heureArrivee;
 
     public AdmissionSortie(Hopital hopital, Patient patient) {
-        long start = System.currentTimeMillis();
         this.patient=patient;
         this.lit = getLit();
         lit.setLibre(false);
         this.numeroChambre=getNumeroChambre();
-        long end = System.currentTimeMillis();
-        this.heureArrivee=end-start;
         hopital.addArchiveAdminssions(this);
     }
 
@@ -42,6 +39,9 @@ public class AdmissionSortie {
         this.lit = lit;
     }
 
+    public void setHeureArrivee(Long heureArrivee) {
+        this.heureArrivee = heureArrivee;
+    }
 
     @Override
     public String toString() {

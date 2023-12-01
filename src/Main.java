@@ -18,10 +18,10 @@ public class Main {
         System.out.println(hopital);
 
         Patient patient1 = new Patient("Lucas", 9864, "Urologie");
-
+        AdmissionSortie adm = new AdmissionSortie(hopital, patient1);
 
         long end = System.nanoTime();
-
-        System.out.println((end-start)/ 1000000000.0);
+        adm.setHeureArrivee((long) ((end-start)/ 1000000000.0));
+        System.out.println(adm);
         }
     }
