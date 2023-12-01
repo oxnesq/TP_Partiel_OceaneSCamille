@@ -14,6 +14,7 @@ public class Main {
         Hopital hopital = new Hopital(services);
         System.out.println(hopital);
 
+        Patient patient1 = new Patient("Lucas",);
 
         }
     }
