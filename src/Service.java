@@ -10,7 +10,7 @@ public class Service {
     private String typeLit;
     private final int nbMax=99;
 
-    public Service(String nom, int numero, int nbChambreSimple, int nbChambreDouble, String typeLits) {
+    public Service(String nom, int numero, int nbChambreSimple, int nbChambreDouble, String typeLit) {
         this.nom = nom;
         this.numero = numero;
         this.nbChambreSimple = nbChambreSimple;
@@ -19,20 +19,28 @@ public class Service {
 
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
-            if (typeLits.equals("Ambulatoire")){
-                LitAmbulatoire lit = new LitAmbulatoire(true);
-            }
             ArrayList<Lit> lits = new ArrayList<Lit>();
+            lits.add(creationLit());
             Chambre chambre = new Chambre(this, lits);
         }
 
         for (int i=0; i<nbChambreDouble; i++){
-            if (typeLits.equals("Ambulatoire")){
-                LitAmbulatoire lit = new LitAmbulatoire(true);
-            }
-            ArrayList<Lit> lits = new ArrayList<Lit>();
+           ArrayList<Lit> lits = new ArrayList<Lit>();
+            lits.add(creationLit());
             Chambre chambre = new Chambre(this, lits);
         }
+    }
+
+    public Lit creationLit(){
+        Lit l = new Lit(true,0,0);
+        if (typeLit.equals("Ambulatoire")){
+            l = new LitAmbulatoire(true);
+        } else if (typeLit.equals("MoyenSejour")) {
+            l = new LitMoyenSejour(true);
+        } else if (typeLit.equals("LongSejour")){
+            l = new LitLongSejour(true);
+        }
+        return l;
     }
 
     public String getNom(){

@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.printf("Hopital!");
 
-        Service serviceUrologie= new Service("Urologie",1,5,5);
+        Service serviceUrologie= new Service("Urologie",1,5,5,"Ambulatoire");
 
         ArrayList<Service> services = new ArrayList<Service>();
         services.add(serviceUrologie);
@@ -15,6 +15,7 @@ public class Main {
         System.out.println(hopital);
 
         Patient patient1 = new Patient("Lucas", 9864, "Urologie");
+        AdmissionSortie(patient1);
 
         }
     }
