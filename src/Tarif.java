@@ -29,4 +29,8 @@ public class Tarif {
     public void setLit(Lit lit) {
         this.lit = lit;
     }
+
+    public void obligation(){
+        prix/=2;
+    }
 }
