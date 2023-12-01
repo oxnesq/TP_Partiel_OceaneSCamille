@@ -1,6 +1,6 @@
 public class Lit {
     private Boolean libre;
-    private int tpsOccupationMax;
+    private int tpsOccupationMax; //en jours
 
     public Lit(Boolean libre, int tpsOccupationMax) {
         this.libre = libre;
