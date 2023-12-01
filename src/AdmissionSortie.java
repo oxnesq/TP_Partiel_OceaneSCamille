@@ -64,9 +64,10 @@ public class AdmissionSortie {
     @Override
     public String toString() {
         return "AdmissionSortie{" +
-                "numeroChambre=" + numeroChambre +
+                "numeroChambre= " + numeroChambre +
                 ", lit=" + lit +
-                ", heureArrivee=" + heureArrivee +
+                ", heureArrivee= " + heureArrivee +
+                "tarif final= " +
                 '}';
     }
 }

@@ -6,6 +6,7 @@ public abstract class Lit {
     public Lit(Boolean libre, int tpsOccupationMax, int tarifLit) {
         this.libre = libre;
         this.tpsOccupationMax = tpsOccupationMax;
+        this.tarifLit=tarifLit;
     }
 
     public Boolean getLibre() {
