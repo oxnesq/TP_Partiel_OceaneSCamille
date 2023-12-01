@@ -22,6 +22,6 @@ public class Main {
 
         long end = System.nanoTime();
         adm.setHeureArrivee((long) ((end-start)/ 1000000000.0));
-        System.out.println(adm.getHeureArrivee());
+        System.out.println(adm);
         }
     }
