@@ -34,6 +34,13 @@ public class Hopital {
         }
     }
 
+    public Service getServiceNb(int i){
+        for (Service s : services){
+            if (s.getNumero()==i)return s;
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Hopital{" +

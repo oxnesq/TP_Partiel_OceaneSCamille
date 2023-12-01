@@ -11,6 +11,7 @@ public class Patient {
     }
 
     public Service serviceRaison(){
+        Service s =new Service("", 0, 0);
         s = switch (s.getTypeLit()) {
             case "Ambulatoire" ->
             default -> throw new IllegalStateException("Unexpected value: ");
