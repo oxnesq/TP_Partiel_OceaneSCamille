@@ -3,6 +3,7 @@ public class Patient {
     private int numSecurite;
     private String raison;
     private Lit lit;
+    private Chambre chambre;
     private Chambre chambreVoulue;
 
     public Patient(String nom, int numSecurite, String raison, Chambre chambreVoulue) {
@@ -46,6 +47,14 @@ public class Patient {
 
     public void setLit(Lit lit) {
         this.lit = lit;
+    }
+
+    public Chambre getChambre() {
+        return chambre;
+    }
+
+    public void setChambre(Chambre chambre) {
+        this.chambre = chambre;
     }
 
     @Override

@@ -2,17 +2,17 @@ public class Tarif {
     private int prix;
     private Lit lit;
     private Patient patient;
-/*
+
     public Tarif(Service service,Patient patient) {
         this.lit=patient.getLit();
 
-        if (.getNbLit()==1){
+        if (patient.getChambre().getNbLit()==1){
             prix=lit.getTarifLit()*2;
         } else {
             prix=lit.getTarifLit();
         }
 
-    }*/
+    }
 
     public int getPrix() {
         return prix;

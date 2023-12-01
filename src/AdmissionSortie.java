@@ -14,6 +14,7 @@ public class AdmissionSortie {
                     lit.setLibre(false);
                     this.numeroChambre=c.getNumero();
                     hopital.addArchiveAdminssions(this);
+                    break;
                 }
 
             }

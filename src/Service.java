@@ -25,6 +25,7 @@ public class Service {
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
             ChambreSimple chambre = new ChambreSimple(this);
+            System.out.println(chambre);
             chambres.add(chambre);
         }
 

@@ -65,13 +65,7 @@ public abstract class Chambre {
     }
 
     public String type(){
-        String type=null;
-        if (nbLit==1){
-            type="simple";
-        } else{
-            type="double";
-        }
-         return type;
+         return getClass().getSimpleName();
     }
 
     @Override
