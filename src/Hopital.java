@@ -8,6 +8,10 @@ public class Hopital {
         this.services =services;
     }
 
+    public Hopital() {
+        this.services=new ArrayList<Service>();
+    }
+
     public int getnbMax(){
         return nbMax;
     }
@@ -18,5 +22,12 @@ public class Hopital {
 
     public void addService(Service s){
         services.add(s);
+    }
+
+    @Override
+    public String toString() {
+        return "Hopital{" +
+                "services=" + services +
+                '}';
     }
 }
