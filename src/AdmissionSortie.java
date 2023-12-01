@@ -12,7 +12,7 @@ public class AdmissionSortie {
                     this.patient=patient;
                     this.lit = c.getLitLibre();
                     lit.setLibre(false);
-                    this.numeroChambre=getNumeroChambre();
+                    this.numeroChambre=c.getNumero();
                     hopital.addArchiveAdminssions(this);
                 }
 

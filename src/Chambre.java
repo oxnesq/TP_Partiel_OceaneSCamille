@@ -6,15 +6,11 @@ public abstract class Chambre {
     private static int num;
     private ArrayList<Lit> lits;
 
-    public Chambre(Service service, ArrayList<Lit> lits) {
-        this.lits = lits;
+    public Chambre(Service service) {
+        this.lits = new ArrayList<Lit>();
         nbLit=lits.size();
         this.numero= service.getNumero()*100 + num;
         num+=1;
-    }
-    public Chambre(Service service) {
-        this();
-        this.lits = new ArrayList<Lit>();
     }
 
     public Lit creationLit(Service service){
@@ -76,5 +72,14 @@ public abstract class Chambre {
             type="double";
         }
          return type;
+    }
+
+    @Override
+    public String toString() {
+        return "Chambre{" +
+                "numero=" + numero +
+                "type "+ type()+
+                "libre "+ litLibre()+
+                '}';
     }
 }
