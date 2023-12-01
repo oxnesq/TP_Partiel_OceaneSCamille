@@ -17,7 +17,9 @@ public class AdmissionSortie {
     }
 
     public Tarif sortiePatient(){
-        patient.getLit()
+        lit.setLibre(true);
+        Tarif tarif = new Tarif(numeroChambre,lit);
+        return
     }
 
     public int getNumeroChambre() {

@@ -13,6 +13,9 @@ public class Chambre {
         num+=1;
     }
 
+    public Chambre() {
+    }
+
     public int getNbLit() {
         return nbLit;
     }

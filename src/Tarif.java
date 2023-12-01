@@ -1,8 +1,11 @@
 public class Tarif {
     private int prix;
     private Lit lit;
+    private Patient patient;
 
-    public Tarif(Chambre chambre,Lit lit) {
+    public Tarif(Patient patient) {
+        this.lit=patient.getLit();
+
         for (Lit l : chambre.getLits()){
             if (l.equals(lit))this.lit = lit;
         }

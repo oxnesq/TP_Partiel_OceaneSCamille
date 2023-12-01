@@ -47,6 +47,14 @@ public class Service {
         return l;
     }
 
+    public Chambre getChambre(int num ){
+        Chambre chambre = new Chambre();
+        for (Chambre c : chambres){
+            if (c.getNumero()==num)chambre=c;
+        }
+        return chambre;
+    }
+
     public String getNom(){
         return nom;
     }
