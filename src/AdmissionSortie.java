@@ -6,10 +6,10 @@ public class AdmissionSortie {
     private Long heureArrivee;
 
     public AdmissionSortie(Patient patient) {
+        long start = System.currentTimeMillis();
         this.patient=patient;
         this.lit = getLit();
         this.numeroChambre=getNumeroChambre();
-        long start = System.currentTimeMillis();
         long end = System.currentTimeMillis();
         this.heureArrivee=end-start;
     }

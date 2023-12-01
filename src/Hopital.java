@@ -4,8 +4,13 @@ public class Hopital {
     private final int nbMax = 9;
 
 
-    public Hopital(ArrayList<Service> services) {
-        this.services =services;
+    public Hopital(ArrayList<Service> services) throws HopitalException {
+        if (services.size()<10){
+            this.services =services;
+        }else{
+            throw new HopitalException("Il y a trop de service");
+        }
+
     }
 
     public Hopital() {
@@ -20,8 +25,12 @@ public class Hopital {
         return services;
     }
 
-    public void addService(Service s){
-        services.add(s);
+    public void addService(Service s)throws HopitalException{
+        if (services.size()<10) {
+            services.add(s);
+        }else{
+            throw new HopitalException("Il y a trop de service");
+        }
     }
 
     @Override
