@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Chambre {
+public abstract class Chambre {
     private int nbLit;
     private int numero;
     private static int num;
@@ -12,6 +12,12 @@ public class Chambre {
         this.numero= service.getNumero()*100 + num;
         num+=1;
     }
+    public Chambre(Service service) {
+        this();
+        this.lits = new ArrayList<Lit>();
+    }
+
+
 
     public Chambre() {
     }
@@ -36,8 +42,8 @@ public class Chambre {
         return lits;
     }
 
-    public void setLits(ArrayList<Lit> lits) {
-        this.lits = lits;
+    public void addLits(Lit lit) {
+        lits.add(lit);
     }
 
     public String type(){

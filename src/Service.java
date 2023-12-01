@@ -24,15 +24,11 @@ public class Service {
 
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
-            ArrayList<Lit> lits = new ArrayList<Lit>();
-            lits.add(creationLit());
-            Chambre chambre = new Chambre(this, lits);
+            ChambreSimple chambre = new ChambreSimple(this, creationLit());
         }
 
         for (int i=0; i<nbChambreDouble; i++){
-           ArrayList<Lit> lits = new ArrayList<Lit>();
-            lits.add(creationLit());
-            Chambre chambre = new Chambre(this, lits);
+            ChambreDouble chambre = new ChambreDouble(this,creationLit(),creationLit() );
         }
     }
 
@@ -46,7 +42,7 @@ public class Service {
         };
         return l;
     }
-
+/*
     public Chambre getChambre(int num ){
         Chambre chambre = new Chambre();
         for (Chambre c : chambres){
@@ -54,7 +50,7 @@ public class Service {
         }
         return chambre;
     }
-
+*/
     public String getNom(){
         return nom;
     }
