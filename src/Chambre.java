@@ -3,12 +3,14 @@ import java.util.ArrayList;
 public class Chambre {
     private int nbLit;
     private int numero;
+    private static int num;
     private ArrayList<Lit> lits;
 
-    public Chambre( int numero, ArrayList<Lit> lits) {
-        this.numero = numero;
+    public Chambre(Service service, ArrayList<Lit> lits) {
         this.lits = lits;
         nbLit=lits.size();
+        this.numero= service.getNumero()*100 + num;
+        num+=1;
     }
 
     public int getNbLit() {
