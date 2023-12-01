@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.concurrent.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -20,5 +21,7 @@ public class Main {
 
 
         long end = System.nanoTime();
+
+        System.out.println((end-start)/ 1000000000.0);
         }
     }
