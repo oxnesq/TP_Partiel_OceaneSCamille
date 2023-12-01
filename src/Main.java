@@ -5,9 +5,9 @@ import java.util.ArrayList;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hopital!");
+        System.out.printf("Hopital!"+'\n');
 
-        Service serviceUrologie= new Service("Urologie",1,5,5);
+        Service serviceUrologie= new Service("Urologie",1,5,5,"Ambulatoire");
 
         ArrayList<Service> services = new ArrayList<Service>();
         services.add(serviceUrologie);

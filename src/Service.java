@@ -15,7 +15,7 @@ public class Service {
         this.numero = numero;
         this.nbChambreSimple = nbChambreSimple;
         this.nbChambreDouble = nbChambreDouble;
-
+        this.typeLit=typeLit;
 
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
@@ -32,14 +32,13 @@ public class Service {
     }
 
     public Lit creationLit(){
-        Lit l = new Lit(true,0,0);
-        if (typeLit.equals("Ambulatoire")){
-            l = new LitAmbulatoire(true);
-        } else if (typeLit.equals("MoyenSejour")) {
-            l = new LitMoyenSejour(true);
-        } else if (typeLit.equals("LongSejour")){
-            l = new LitLongSejour(true);
-        }
+        Lit l =new Lit(true, 0, 0);
+        l = switch (typeLit) {
+            case "Ambulatoire" -> new LitAmbulatoire(true);
+            case "MoyenSejour" -> new LitMoyenSejour(true);
+            case "LongSejour" -> new LitLongSejour(true);
+            default -> throw new IllegalStateException("Unexpected value: " + typeLit);
+        };
         return l;
     }
 
