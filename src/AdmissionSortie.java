@@ -5,11 +5,13 @@ public class AdmissionSortie {
     private Lit lit;
     private Long heureArrivee;
 
-    public AdmissionSortie(Patient patient, int numeroChambre, Lit lit) {
+    public AdmissionSortie(Patient patient) {
         this.patient=patient;
-        this.numeroChambre = numeroChambre;
-        this.lit = lit;
-        this.heureArrivee=System.currentTimeMillis();
+        this.lit = getLit();
+        this.numeroChambre=getNumeroChambre();
+        long start = System.currentTimeMillis();
+        long end = System.currentTimeMillis();
+        this.heureArrivee=end-start;
     }
 
 

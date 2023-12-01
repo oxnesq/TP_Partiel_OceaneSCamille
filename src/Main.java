@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -15,6 +16,8 @@ public class Main {
         System.out.println(hopital);
 
         Patient patient1 = new Patient("Lucas", 9864, "Urologie");
+        AdmissionSortie adm = new AdmissionSortie(patient1);
+        System.out.println(adm);
 
         }
     }
