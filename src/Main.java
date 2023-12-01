@@ -17,7 +17,10 @@ public class Main {
         Hopital hopital = new Hopital(services);
         System.out.println(hopital);
 
-        Patient patient1 = new Patient("Lucas", 9864, "Urologie");
+
+        ChambreSimple chambreSimple = new ChambreSimple(serviceUrologie);
+
+        Patient patient1 = new Patient("Lucas", 9864, "Urologie",chambreSimple );
         AdmissionSortie adm = new AdmissionSortie(hopital, patient1);
 
         long end = System.nanoTime();

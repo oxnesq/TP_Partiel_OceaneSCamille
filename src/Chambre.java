@@ -17,7 +17,16 @@ public abstract class Chambre {
         this.lits = new ArrayList<Lit>();
     }
 
-
+    public Lit creationLit(Service service){
+        Lit l =new Lit(true, 0, 0);
+        l = switch (service.getTypeLit()) {
+            case "Ambulatoire" -> new LitAmbulatoire(true);
+            case "MoyenSejour" -> new LitMoyenSejour(true);
+            case "LongSejour" -> new LitLongSejour(true);
+            default -> throw new IllegalStateException("Unexpected value: " + service.getTypeLit());
+        };
+        return l;
+    }
 
     public Chambre() {
     }

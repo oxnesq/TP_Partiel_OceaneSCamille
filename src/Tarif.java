@@ -3,12 +3,10 @@ public class Tarif {
     private Lit lit;
     private Patient patient;
 
-    public Tarif(Patient patient) {
+    public Tarif(Service service,Patient patient) {
         this.lit=patient.getLit();
-        for (Lit l : chambre.getLits()){
-            if (l.equals(lit))this.lit = lit;
-        }
-        if (chambre.getNbLit()==1){
+
+        if (.getNbLit()==1){
             prix=lit.getTarifLit()*2;
         } else {
             prix=lit.getTarifLit();

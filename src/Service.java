@@ -24,33 +24,27 @@ public class Service {
 
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
-            ChambreSimple chambre = new ChambreSimple(this, creationLit());
+            ChambreSimple chambre = new ChambreSimple(this);
         }
 
         for (int i=0; i<nbChambreDouble; i++){
-            ChambreDouble chambre = new ChambreDouble(this,creationLit(),creationLit() );
+            ChambreDouble chambre = new ChambreDouble(this );
         }
     }
 
-    public Lit creationLit(){
-        Lit l =new Lit(true, 0, 0);
-        l = switch (typeLit) {
-            case "Ambulatoire" -> new LitAmbulatoire(true);
-            case "MoyenSejour" -> new LitMoyenSejour(true);
-            case "LongSejour" -> new LitLongSejour(true);
-            default -> throw new IllegalStateException("Unexpected value: " + typeLit);
-        };
-        return l;
+    public String getTypeLit() {
+        return typeLit;
     }
-/*
-    public Chambre getChambre(int num ){
-        Chambre chambre = new Chambre();
-        for (Chambre c : chambres){
-            if (c.getNumero()==num)chambre=c;
+
+
+        public Chambre getChambre(int num ){
+            for (Chambre c : chambres){
+                if (c.getNumero()==num)return c;
+            }
+            return null;
         }
-        return chambre;
-    }
-*/
+
+
     public String getNom(){
         return nom;
     }

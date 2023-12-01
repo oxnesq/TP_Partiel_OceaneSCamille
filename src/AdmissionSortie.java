@@ -6,6 +6,8 @@ public class AdmissionSortie {
     private Long heureArrivee;
 
     public AdmissionSortie(Hopital hopital, Patient patient) {
+
+
         this.patient=patient;
         this.lit = getLit();
         lit.setLibre(false);
