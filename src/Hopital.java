@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 public class Hopital {
-    private ArrayList<Service> service;
+    private ArrayList<Service> services;
     private final int nbMax = 9;
 
 
-    public Hopital(ArrayList<Service> service) {
-        this.service=service;
+    public Hopital(ArrayList<Service> services) {
+        this.services =services;
     }
 
     public int getnbMax(){
         return nbMax;
     }
 
-    public ArrayList<Service> getServiceHopital(){
-        return service;
+    public ArrayList<Service> getServicesHopital(){
+        return services;
     }
 
-    public void setService(ArrayList<Service> service) {
-        this.service = service;
+    public void addService(Service s){
+        services.add(s);
     }
 }
