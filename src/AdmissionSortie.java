@@ -1,15 +1,15 @@
-import java.util.Date();
+
 public class AdmissionSortie {
     private int numeroChambre;
     private Lit lit;
-    private int heureArrivee;
+    private Long heureArrivee;
 
     public AdmissionSortie(int numeroChambre, Lit lit) {
         this.numeroChambre = numeroChambre;
         this.lit = lit;
+        this.heureArrivee=System.currentTimeMillis();
     }
 
-    public void heureArrivee;
 
     public int getNumeroChambre() {
         return numeroChambre;
@@ -19,7 +19,15 @@ public class AdmissionSortie {
         return lit;
     }
 
-    public int getHeureArrivee() {
+    public Long getHeureArrivee() {
         return heureArrivee;
+    }
+
+    public void setNumeroChambre(int numeroChambre) {
+        this.numeroChambre = numeroChambre;
+    }
+
+    public void setLit(Lit lit) {
+        this.lit = lit;
     }
 }
