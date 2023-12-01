@@ -15,4 +15,8 @@ public class Hopital {
     public ArrayList<Service> getServiceHopital(){
         return service;
     }
+
+    public void setService(ArrayList<Service> service) {
+        this.service = service;
+    }
 }
