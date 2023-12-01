@@ -31,4 +31,13 @@ public class Lit {
     public void setTarifLit(int tarifLit) {
         this.tarifLit = tarifLit;
     }
+
+    @Override
+    public String toString() {
+        return "Lit{" +
+                "libre=" + libre +
+                ", tpsOccupationMax=" + tpsOccupationMax +
+                ", tarifLit=" + tarifLit +
+                '}';
+    }
 }

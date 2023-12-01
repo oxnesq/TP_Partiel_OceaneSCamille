@@ -10,7 +10,7 @@ public class AdmissionSortie {
             if (c.type().equals(patient.getChambreVoulue().type())){
                 if (c.litLibre()){
                     this.patient=patient;
-                    this.lit = getLit();
+                    this.lit = c.getLitLibre();
                     lit.setLibre(false);
                     this.numeroChambre=getNumeroChambre();
                     hopital.addArchiveAdminssions(this);

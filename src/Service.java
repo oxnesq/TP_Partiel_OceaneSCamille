@@ -25,10 +25,12 @@ public class Service {
         this.chambres = new ArrayList<Chambre>();
         for (int i=0; i<nbChambreSimple; i++){
             ChambreSimple chambre = new ChambreSimple(this);
+            chambres.add(chambre);
         }
 
         for (int i=0; i<nbChambreDouble; i++){
             ChambreDouble chambre = new ChambreDouble(this );
+            chambres.add(chambre);
         }
     }
 
@@ -89,8 +91,8 @@ public class Service {
     public String toString() {
         return "Service{" +
                 "nom='" + nom + '\'' +
-                ", numero=" + numero +
-                "chambres: "
+                ", numero=" + numero + '\''+
+                "chambres= "+ chambres+
                 '}';
     }
 }

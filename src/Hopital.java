@@ -12,6 +12,8 @@ public class Hopital {
             throw new HopitalException("Il y a trop de service");
         }
 
+        archiveAdminssions= new ArrayList<AdmissionSortie>();
+
     }
 
     public Hopital() {
