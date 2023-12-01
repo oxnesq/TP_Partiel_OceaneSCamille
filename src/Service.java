@@ -65,6 +65,10 @@ public class Service {
         this.nom = nom;
     }
 
+    public ArrayList<Chambre> getChambres() {
+        return chambres;
+    }
+
     public void setNumero(int numero) {
         this.numero = numero;
     }

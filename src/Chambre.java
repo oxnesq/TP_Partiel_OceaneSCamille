@@ -31,6 +31,13 @@ public abstract class Chambre {
     public Chambre() {
     }
 
+    public Boolean litLibre(){
+        for (Lit l : lits){
+            if (l.getLibre())return true;
+        }
+        return false;
+    }
+
     public int getNbLit() {
         return nbLit;
     }

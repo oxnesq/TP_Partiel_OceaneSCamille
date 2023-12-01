@@ -6,13 +6,22 @@ public class AdmissionSortie {
     private Long heureArrivee;
 
     public AdmissionSortie(Hopital hopital, Patient patient) {
+        for (Chambre c : servicePatient(hopital,patient).getChambres()){
+            if (c.type().equals(patient.getChambreVoulue().type())){
+                if (c.litLibre()){
+                    this.patient=patient;
+                    this.lit = getLit();
+                    lit.setLibre(false);
+                    this.numeroChambre=getNumeroChambre();
+                    hopital.addArchiveAdminssions(this);
+                }
 
+            }
+        }
 
-        this.patient=patient;
-        this.lit = getLit();
-        lit.setLibre(false);
-        this.numeroChambre=getNumeroChambre();
-        hopital.addArchiveAdminssions(this);
+    }
+    public Service servicePatient(Hopital hopital, Patient patient){
+        return hopital.getServiceNb(patient.getRaison());
     }
 
     public String sortiePatient(){

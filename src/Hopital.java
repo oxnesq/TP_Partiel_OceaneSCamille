@@ -34,9 +34,9 @@ public class Hopital {
         }
     }
 
-    public Service getServiceNb(int i){
+    public Service getServiceNb(String i){
         for (Service s : services){
-            if (s.getNumero()==i)return s;
+            if (s.getNom()==i)return s;
         }
         return null;
     }

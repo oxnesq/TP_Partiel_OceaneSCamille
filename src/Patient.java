@@ -3,20 +3,17 @@ public class Patient {
     private int numSecurite;
     private String raison;
     private Lit lit;
+    private Chambre chambreVoulue;
 
-    public Patient(String nom, int numSecurite, String raison, Chambre chambre) {
+    public Patient(String nom, int numSecurite, String raison, Chambre chambreVoulue) {
         this.nom = nom;
         this.numSecurite = numSecurite;
         this.raison = raison;
+        this.chambreVoulue=chambreVoulue;
     }
 
-    public Service serviceRaison(){
-        Service s =new Service("", 0, 0);
-        s = switch (s.getTypeLit()) {
-            case "Ambulatoire" ->
-            default -> throw new IllegalStateException("Unexpected value: ");
-        };
-        return s;
+    public Chambre getChambreVoulue() {
+        return chambreVoulue;
     }
 
     public String getNom() {
