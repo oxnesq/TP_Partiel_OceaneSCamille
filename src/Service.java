@@ -10,11 +10,16 @@ public class Service {
     private String typeLit;
     private final int nbMax=99;
 
-    public Service(String nom, int numero, int nbChambreSimple, int nbChambreDouble, String typeLit) {
+    public Service(String nom, int numero, int nbChambreSimple, int nbChambreDouble, String typeLit) throws HopitalException{
         this.nom = nom;
         this.numero = numero;
-        this.nbChambreSimple = nbChambreSimple;
-        this.nbChambreDouble = nbChambreDouble;
+        if (nbChambreSimple+nbChambreDouble<100){
+            this.nbChambreSimple = nbChambreSimple;
+            this.nbChambreDouble = nbChambreDouble;
+        }else{
+            throw new HopitalException("trop de lit");
+        }
+
         this.typeLit=typeLit;
 
         this.chambres = new ArrayList<Chambre>();
@@ -74,8 +79,8 @@ public class Service {
         this.nbChambreDouble = nbChambreDouble;
     }
 
-    public int nbChambreTot(){
-        return nbChambreSimple+nbChambreDouble;
+    public int nbChambreTot() {
+            return nbChambreSimple+nbChambreDouble;
     }
 
     @Override
