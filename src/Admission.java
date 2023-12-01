@@ -1,17 +1,18 @@
 
-public class AdmissionSortie {
+public class Admission {
     private Patient patient;
     private int numeroChambre;
     private Lit lit;
     private Long heureArrivee;
 
-    public AdmissionSortie(Patient patient) {
+    public Admission(Hopital hopital, Patient patient) {
         long start = System.currentTimeMillis();
         this.patient=patient;
         this.lit = getLit();
         this.numeroChambre=getNumeroChambre();
         long end = System.currentTimeMillis();
         this.heureArrivee=end-start;
+        hopital.addArchiveAdminssions(this);
     }
 
 

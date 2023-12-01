@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class Hopital {
     private ArrayList<Service> services;
     private final int nbMax = 9;
+    private ArrayList<Admission> archiveAdminssions;
 
 
     public Hopital(ArrayList<Service> services) throws HopitalException {
@@ -37,6 +38,15 @@ public class Hopital {
     public String toString() {
         return "Hopital{" +
                 "services=" + services +
+                "admissions" + archiveAdminssions+
                 '}';
+    }
+
+    public ArrayList<Admission> getArchiveAdminssions() {
+        return archiveAdminssions;
+    }
+
+    public void addArchiveAdminssions(Admission adm) {
+        archiveAdminssions.add(adm);
     }
 }
